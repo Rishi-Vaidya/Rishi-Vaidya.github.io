@@ -68,23 +68,29 @@ body {
     display: flex;
     gap: 40px;
     align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 .left-header {
-    flex: 0 0 500px; /* fixed width column */
+    flex: 0 0 350px; /* fixed width column for picture/title */
+    max-width: 100%;
     text-align: center;
     position: relative;
     z-index: 1;
 }
 
 .right-header {
+    flex: 1; /* take remaining space */
+    min-width: 300px; /* prevents shrinking too small */
+    text-align: left; /* align body text vertically */
+    background-color: rgba(22, 72, 119, 0.1);
     border-radius: 20px;
     padding: 30px;
-    background-color: rgba(22, 72, 119, 0.1);
-    flex: 0 0 600px; /* takes up remaining space */
-    text-align: center;
     position: relative;
     z-index: 1;
+    display: flex;
+    flex-direction: column; /* ensures vertical stacking */
+    justify-content: center; /* vertically center content */
 }
 
 .right-header-overlay {
@@ -136,12 +142,17 @@ body {
         flex: unset;
     }
 
+    .right-header {
+        text-align: center;
+        min-width: unset;
+        width: 100%;
+    }
+
     .profilepic {
         width: 150px;
         height: 150px;
     }
 }
-
 
 /* Navigation */
 .nav {
@@ -344,20 +355,18 @@ body {
 }
 
 .note {
-        text-align: center;
-    }
+    text-align: center;
+}
 
 @keyframes skillLoad {
     from { width: 0; }
 }
 
-
 /*Showcase Section */
-
 .projectpic {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    gap: 20px; /* space between images */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
     margin-top: 20px;
     align-items: center;
 }
@@ -381,7 +390,6 @@ body {
     color: #292929;
     font-style: italic;
 }
-
 
 /* Contact Section */
 .contact-grid {
@@ -454,6 +462,4 @@ body {
     .section h2 {
         font-size: 1.8em;
     }
-
-    
 }
