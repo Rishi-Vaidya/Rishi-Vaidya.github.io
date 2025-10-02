@@ -58,7 +58,7 @@
                         <ul>
                             <li><strong>Problem:</strong> Enterprise software often suffers from low adoption due to poor usability.</li>
                             <li><strong>Value Add:</strong> Supported the integration of user-centered design principles into enterprise projects.</li>
-                            <li><strong>Solution:</strong> Shadowed UI/UX teams, participated in research & wireframing, & engaged with senior executives to connect design with business goals.</li>
+                            <li><strong>Solution:</strong> Shadowed UI/UX teams, participated in research, wireframing, & engaged with senior executives to connect design with business goals.</li>
                             <li><strong>Results:</strong> Developed practical skills in UX processes and a business-first perspective on technology adoption. Final project grew UX satisfaction by 10%.</li>
                         </ul>
                     </div>
@@ -95,15 +95,15 @@
                         <div class="skill-category">
                             <h3>Technical Skills</h3>
                             <div class="skill-item">
-                                <div class="skill-name"><span>Web Development</span><span data-width="90%">0%</span></div>
+                                <div class="skill-name"><span>Web Development</span><span data-width="90%">90%</span></div>
                                 <div class="skill-bar"><div class="skill-progress"></div></div>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-name"><span>UI/UX Design</span><span data-width="95%">0%</span></div>
+                                <div class="skill-name"><span>UI/UX Design</span><span data-width="95%">95%</span></div>
                                 <div class="skill-bar"><div class="skill-progress"></div></div>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-name"><span>Programming Languages</span><span data-width="85%">0%</span></div>
+                                <div class="skill-name"><span>Programming Languages</span><span data-width="85%">85%</span></div>
                                 <div class="skill-bar"><div class="skill-progress"></div></div>
                             </div>
                         </div>
@@ -111,15 +111,15 @@
                         <div class="skill-category">
                             <h3>Professional Skills</h3>
                             <div class="skill-item">
-                                <div class="skill-name"><span>Project Management</span><span data-width="85%">0%</span></div>
+                                <div class="skill-name"><span>Project Management</span><span data-width="85%">85%</span></div>
                                 <div class="skill-bar"><div class="skill-progress"></div></div>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-name"><span>Team Leadership</span><span data-width="95%">0%</span></div>
+                                <div class="skill-name"><span>Team Leadership</span><span data-width="95%">95%</span></div>
                                 <div class="skill-bar"><div class="skill-progress"></div></div>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-name"><span>Communication</span><span data-width="95%">0%</span></div>
+                                <div class="skill-name"><span>Communication</span><span data-width="95%">95%</span></div>
                                 <div class="skill-bar"><div class="skill-progress"></div></div>
                             </div>
                         </div>
@@ -183,7 +183,7 @@
                             </figure>
                             <figure>
                                 <img src="./images/results.png" alt="results post">
-                                <figcaption>Figure 6: New & Improved results graphic for easier comprehension</figcaption>
+                                <figcaption>Figure 6: New & improved results graphic for easier comprehension</figcaption>
                             </figure>
                             <figure>
                                 <img src="images/training.png" alt="training schedule">
@@ -191,7 +191,7 @@
                             </figure>
                             <figure>
                                 <img src="./images/matchday.png" alt="matchday graphic">
-                                <figcaption>Figure 8: Eye-Catching Matchday graphic tested to provide most engagement</figcaption>
+                                <figcaption>Figure 8: Eye-catching Matchday graphic tested to provide most engagement</figcaption>
                             </figure>
                         </div>
 
@@ -223,7 +223,7 @@
                             </figure>
                             <figure>
                                 <img src="./images/website4.png" alt="events">
-                                <figcaption>Figure 12: All events overview page with clear categorization</figcaption>
+                                <figcaption>Figure 12: All events overview page with clear categorisation</figcaption>
                             </figure>
                         </div>
 
@@ -266,9 +266,7 @@
             });
         });
 
-        // Animate skill bars
-        const skillBars = document.querySelectorAll('.skill-progress');
-        const skillLabels = document.querySelectorAll('.skill-name span[data-width]');
+       // Animate skill bars
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -281,7 +279,9 @@
             });
         }, { threshold: 0.5 });
 
-        document.querySelectorAll('.skill-category').forEach(cat => observer.observe(cat));
+// Observe each skill item instead of category
+document.querySelectorAll('.skill-item').forEach(item => observer.observe(item));
+
     </script>
 </body>
 </html>
